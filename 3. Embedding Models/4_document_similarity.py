@@ -2,7 +2,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-
+k
 load_dotenv()
 
 embedding = HuggingFaceEmbeddings(model='sentence-transformers/all-MiniLM-L6-v2')
