@@ -2,8 +2,10 @@ from langchain_huggingface import HuggingFaceEmbeddings
 
 embedding = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
 
-text = "Delhi is capital of India"
+docs = ["Delhi is capital of India",
+       "Paris is capital of France"
+]
 
-vector= embedding.embed_query(text)
+doc_embeddings = embedding.embed_documents(docs)
 
-print(str(vector))
+print(str(doc_embeddings))
