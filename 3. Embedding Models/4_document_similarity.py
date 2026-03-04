@@ -18,6 +18,7 @@ documents = [
 query= "Who is virat kohli?"
 
 doc_embeddings = embedding.embed_documents(documents)
+
 query_embedding = embedding.embed_query(query)
 
 scores = cosine_similarity([query_embedding],doc_embeddings)[0]
